@@ -11,9 +11,11 @@ let albumPic = document.querySelector('#albumPic');
 let musicQueue = document.querySelector('#music-list');
 let songInfo = document.querySelector('#info');
 let song = document.querySelector('#song');
+let nextSongP = document.querySelector('#nextSongI');
 let odd = 0;
+index = 0;
 
-let songList = [
+const songList = [
   {
     artist: 'the weeknd',
     title: 'less than zero',
@@ -45,3 +47,7 @@ let songList = [
     album: 'assets/images/trench.jpg',
   },
 ];
+
+song.src = songList[index].src;
+albumPic.src = songList[index].album;
+songInfo.textContent = songList[index].artist + ' - ' + songList[index].title;
