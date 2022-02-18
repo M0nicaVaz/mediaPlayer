@@ -7,38 +7,32 @@
     <title>Media Player</title>
     <link rel="stylesheet" href="app/css/style.css" />
     <link
-    href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet"
-  />
-  <link rel="icon" href="assets/images/icon.png" type="png">
-  
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/images/icon.png" type="png" />
   </head>
 
   <body>
     <div class="container">
       <div class="inside list-container">
         <h1>MY PLAYLIST</h1>
-        <ul id="music-list">
-          <li>teste 1</li>
-          <li>teste 2</li>
-          <li>teste 3</li>
-        </ul>
+
+        <ul id="music-list"></ul>
       </div>
 
       <div class="inside player-container">
         <p id="nextSongI"></p>
-        <img id= "albumPic"
-          src=""
-        />
+        <img id="albumPic" src="" />
         <h2 id="info">Informação - Da Música</h2>
 
         <div id="progressionBar">
           <div id="progress"></div>
-      </div>
+        </div>
 
         <div class="audio-control">
           <audio id="song">
-            <source src ="" />
+            <source src="" />
           </audio>
 
           <button id="listBtn" class="btn">
@@ -61,12 +55,12 @@
           </button>
           <button id="stopBtn" class="btn">
             <i class="material-icons"> stop </i>
+          </button>
         </div>
       </div>
     </div>
 
     <script src="app/js/data.js"></script>
     <script src="app/js/script.js"></script>
-   
   </body>
 </html>

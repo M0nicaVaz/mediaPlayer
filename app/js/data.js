@@ -17,37 +17,28 @@ index = 0;
 
 const songList = [
   {
-    artist: 'the weeknd',
-    title: 'less than zero',
+    title: 'the weeknd - less than zero',
     src: 'assets/audios/The_Weeknd_Less_Than_Zero.mp3',
     album: 'assets/images/dawn_fm.jpg',
   },
   {
-    artist: 'frank ocean',
-    title: 'channel',
+    title: 'frank ocean - channel',
     src: 'assets/audios/Frank_Ocean_Chanel.mp3',
     album: 'assets/images/channel.jpg',
   },
   {
-    artist: 'the xx',
-    title: 'say something loving',
+    title: 'the xx - say something loving',
     src: 'assets/audios/The_XX_Say_Something_Loving.mp3',
     album: 'assets/images/i_see_you.jpg',
   },
   {
-    artist: 'the neighbourhood',
-    title: 'nervous',
+    title: 'the neighbourhood - nervous',
     src: 'assets/audios/The_Neighbourhood_Nervous.mp3',
     album: 'assets/images/the_neighbourhood.jpg',
   },
   {
-    artist: 'twenty one pilots',
-    title: 'pet cheetah',
+    title: 'twenty one pilots - pet cheetah',
     src: 'assets/audios/twenty_one_pilots_Pet Cheetah.mp3',
     album: 'assets/images/trench.jpg',
   },
 ];
-
-song.src = songList[index].src;
-albumPic.src = songList[index].album;
-songInfo.textContent = songList[index].artist + ' - ' + songList[index].title;

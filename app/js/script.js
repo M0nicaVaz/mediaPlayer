@@ -1,30 +1,14 @@
+function changePlayer() {
+  song.src = songList[index].src;
+  albumPic.src = songList[index].album;
+  songInfo.textContent = songList[index].title;
+}
+
 window.addEventListener('load', () => {
-  musicQueue.innerHTML =
-    '<li data-src="assets/audios/The_Weeknd_Less_Than_Zero.mp3">' +
-    songList[0].artist +
-    ' - ' +
-    songList[0].title +
-    '</li>' +
-    '<li data-src="assets/audios/Frank_Ocean_Chanel.mp3">' +
-    songList[1].artist +
-    ' - ' +
-    songList[1].title +
-    '</li>' +
-    '<li data-src="assets/audios/The_XX_Say_Something_Loving.mp3">' +
-    songList[2].artist +
-    ' - ' +
-    songList[2].title +
-    '</li>' +
-    '<li data-src="assets/audios/The_Neighbourhood_Nervous.mp3">' +
-    songList[3].artist +
-    ' - ' +
-    songList[3].title +
-    '</li>' +
-    '<li data-src="assets/audios/twenty_one_pilots_Pet Cheetah.mp3">' +
-    songList[4].artist +
-    ' - ' +
-    songList[4].title +
-    '</li>';
+  for (let i = 0; i < songList.length; i++) {
+    musicQueue.innerHTML += '<li>' + songList[i].title + '</li>';
+  }
+  changePlayer();
 });
 
 playBtn.addEventListener('click', () => {
@@ -41,11 +25,11 @@ playBtn.addEventListener('click', () => {
 });
 
 musicQueue.addEventListener('click', (e) => {
-  let pickedSong = e.target.dataset.src;
-  console.log(pickedSong);
-  song.src = pickedSong;
+  let obj = songList.findIndex((obj) => obj.title === e.target.innerText);
+  index = obj;
+  song.src = songList[index].src;
+  changePlayer();
   song.play();
-  playBtn.innerHTML = "<i class='material-icons pause'>pause_circle_filled</i>";
 });
 
 listBtn.addEventListener('click', () => {
@@ -96,28 +80,22 @@ function nextSong() {
 }
 
 function showInfo() {
-  songInfo.innerHTML = songList[index].artist + ' - ' + songList[index].title;
+  songInfo.innerHTML = songList[index].title;
   albumPic.src = songList[index].album;
+}
+
+function showNextSong() {
+  if (playerContainer.classList.contains('big-player')) {
+    if (index < 4) {
+      nextSongP.innerHTML = 'próxima música: ' + songList[index + 1].title;
+    } else {
+      nextSongP.innerHTML = 'próxima música: ' + songList[0].title;
+    }
+  }
 }
 
 nextBtn.addEventListener('click', nextSong);
 song.addEventListener('ended', nextSong);
 
-function showNextSong() {
-  if (playerContainer.classList.contains('big-player')) {
-    if (index < 4) {
-      nextSongP.innerHTML =
-        'próxima música: ' +
-        songList[index + 1].artist +
-        ' - ' +
-        songList[index + 1].title;
-    } else {
-      nextSongP.innerHTML =
-        'próxima música: ' + songList[0].artist + ' - ' + songList[0].title;
-    }
-  }
-}
-
-//  previous button
+// previous button
 // progression bar
-// list
