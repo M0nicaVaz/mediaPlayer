@@ -4,6 +4,33 @@ function changePlayer() {
   songInfo.textContent = songList[index].title;
 }
 
+function nextSong() {
+  index++;
+  if (index >= songList.length) {
+    index = 0;
+  }
+  song.src = songList[index].src;
+  song.play();
+  playBtn.innerHTML = "<i class='material-icons pause'>pause_circle_filled</i>";
+  showInfo();
+  showNextSong();
+}
+
+function showInfo() {
+  songInfo.innerHTML = songList[index].title;
+  albumPic.src = songList[index].album;
+}
+
+function showNextSong() {
+  if (playerContainer.classList.contains('big-player')) {
+    if (index < 4) {
+      nextSongP.innerHTML = 'próxima música: ' + songList[index + 1].title;
+    } else {
+      nextSongP.innerHTML = 'próxima música: ' + songList[0].title;
+    }
+  }
+}
+
 window.addEventListener('load', () => {
   for (let i = 0; i < songList.length; i++) {
     musicQueue.innerHTML += '<li>' + songList[i].title + '</li>';
@@ -67,35 +94,17 @@ rewindBtn.addEventListener('click', () => {
   song.currentTime -= 10;
 });
 
-function nextSong() {
-  index++;
-  if (index >= songList.length) {
-    index = 0;
-  }
+prevBtn.addEventListener('click', () => {
+  index--;
   song.src = songList[index].src;
   song.play();
   playBtn.innerHTML = "<i class='material-icons pause'>pause_circle_filled</i>";
   showInfo();
   showNextSong();
-}
-
-function showInfo() {
-  songInfo.innerHTML = songList[index].title;
-  albumPic.src = songList[index].album;
-}
-
-function showNextSong() {
-  if (playerContainer.classList.contains('big-player')) {
-    if (index < 4) {
-      nextSongP.innerHTML = 'próxima música: ' + songList[index + 1].title;
-    } else {
-      nextSongP.innerHTML = 'próxima música: ' + songList[0].title;
-    }
-  }
-}
+});
 
 nextBtn.addEventListener('click', nextSong);
+
 song.addEventListener('ended', nextSong);
 
-// previous button
 // progression bar
