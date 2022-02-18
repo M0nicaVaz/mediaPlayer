@@ -1,27 +1,16 @@
-let listBtn = document.querySelector('#listBtn');
-let listContainer = document.querySelector('.list-container');
-let playerContainer = document.querySelector('.player-container');
-let playBtn = document.querySelector('#playBtn');
-let rewindBtn = document.querySelector('#rewindBtn');
-let fowardBtn = document.querySelector('#fowardBtn');
-let stopBtn = document.querySelector('#stopBtn');
-let prevBtn = document.querySelector('#prevBtn');
-let nextBtn = document.querySelector('#nextBtn');
-let albumPic = document.querySelector('#albumPic');
-let song = document.querySelector('#song');
-let odd = 0;
+song.src = songList[4].src;
+albumPic.src = songList[4].album;
 
-let songList = [
-  {
-    artist: 'the weeknd',
-    title: 'less than zero',
-    src: 'assets/audios/The_Weeknd_Less_Than_Zero.mp3',
-    album: 'assets/images/dawn_fm.jpg',
-  },
-];
+musicQueue.innerHTML =
+  '<li>' + songList[4].artist + ' - ' + songList[4].title + '</li>';
 
-song.src = songList[0].src;
-albumPic.src = songList[0].album;
+songInfo.textContent = songList[4].artist + ' - ' + songList[4].title;
+
+musicQueue.addEventListener('click', () => {
+  playBtn.innerHTML = "<i class='material-icons pause'>pause_circle_filled</i>";
+  song.currentTime = 0;
+  song.play();
+});
 
 listBtn.addEventListener('click', () => {
   let listBtn = document.querySelector('#listBtn');
@@ -42,7 +31,7 @@ listBtn.addEventListener('click', () => {
 });
 
 playBtn.addEventListener('click', () => {
-  albumPic.src = songList[0].album;
+  albumPic.src = songList[4].album;
   if (song.paused) {
     song.play();
     playBtn.innerHTML =
