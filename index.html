@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MediaPlayer</title>
     <link rel="stylesheet" href="app/css/style.css" />
+    <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  
   </head>
 
   <body>
     <div class="container">
       <div class="inside list-container">
+        <h1>MY PLAYLIST</h1>
         <ul id="music-list">
           <li>teste 1</li>
           <li>teste 2</li>
@@ -19,11 +25,40 @@
       </div>
 
       <div class="inside player-container">
-        <img src="" />
+        <img id= "albumPic"
+          src=""
+        />
+        <h2 id="info">Informação - Da Música</h2>
+
+        <div id="progressionBar">
+          <div id="progress"></div>
+      </div>
+
         <div class="audio-control">
-          <audio controls>
-            <source src="/assets/audios/file_example_MP3_700KB.mp3" />
+          <audio id="song">
+            <source src ="" />
           </audio>
+
+          <button id="listBtn" class="btn">
+            <i id="listBtn" class="material-icons"> playlist_remove</i>
+          </button>
+          <button id="prevBtn" class="btn">
+            <i class="material-icons"> skip_previous </i>
+          </button>
+          <button id="rewindBtn" class="btn">
+            <i class="material-icons"> fast_rewind </i>
+          </button>
+          <button id="playBtn" class="btn big">
+            <i class="material-icons"> play_circle </i>
+          </button>
+          <button id="fowardBtn" class="btn">
+            <i class="material-icons"> fast_forward </i>
+          </button>
+          <button id="nextBtn" class="btn">
+            <i class="material-icons"> skip_next </i>
+          </button>
+          <button id="stopBtn" class="btn">
+            <i class="material-icons"> stop </i>
         </div>
       </div>
     </div>
