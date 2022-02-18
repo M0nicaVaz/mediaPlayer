@@ -1,26 +1,26 @@
 window.addEventListener('load', () => {
   musicQueue.innerHTML =
-    '<li>' +
+    '<li data-src="assets/audios/The_Weeknd_Less_Than_Zero.mp3">' +
     songList[0].artist +
     ' - ' +
     songList[0].title +
     '</li>' +
-    '<li>' +
+    '<li data-src="assets/audios/Frank_Ocean_Chanel.mp3">' +
     songList[1].artist +
     ' - ' +
     songList[1].title +
     '</li>' +
-    '<li>' +
+    '<li data-src="assets/audios/The_XX_Say_Something_Loving.mp3">' +
     songList[2].artist +
     ' - ' +
     songList[2].title +
     '</li>' +
-    '<li>' +
+    '<li data-src="assets/audios/The_Neighbourhood_Nervous.mp3">' +
     songList[3].artist +
     ' - ' +
     songList[3].title +
     '</li>' +
-    '<li>' +
+    '<li data-src="assets/audios/twenty_one_pilots_Pet Cheetah.mp3">' +
     songList[4].artist +
     ' - ' +
     songList[4].title +
@@ -41,10 +41,11 @@ playBtn.addEventListener('click', () => {
 });
 
 musicQueue.addEventListener('click', (e) => {
-  console.log(e.target);
-  playBtn.innerHTML = "<i class='material-icons pause'>pause_circle_filled</i>";
-  song.currentTime = 0;
+  let pickedSong = e.target.dataset.src;
+  console.log(pickedSong);
+  song.src = pickedSong;
   song.play();
+  playBtn.innerHTML = "<i class='material-icons pause'>pause_circle_filled</i>";
 });
 
 listBtn.addEventListener('click', () => {
