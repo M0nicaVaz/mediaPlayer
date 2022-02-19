@@ -67,7 +67,7 @@ listBtn.addEventListener('click', () => {
   odd++;
 
   if (odd % 2) {
-    albumPic.style.transform = 'scale(1.2)';
+    albumPic.style.transform = 'scale(1.1)';
     listBtn.innerHTML =
       ' <i id="listBtn" class="material-icons"> playlist_add</i>';
     nextSongP.style.opacity = '1';
