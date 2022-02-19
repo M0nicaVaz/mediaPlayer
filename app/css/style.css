@@ -99,7 +99,9 @@ h2 {
   color: #d9f504;
   transform: scale(2);
 }
-
+#playBtn:hover {
+  color: #631199;
+}
 .big {
   transform: scale(1.8);
 }
