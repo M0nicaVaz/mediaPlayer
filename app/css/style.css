@@ -55,6 +55,7 @@ li:hover {
   background-color: #d9f504;
   transform: scale(1.1);
   font-size: 22px;
+  margin-bottom: 10px;
 }
 .player-container {
   text-align: center;
@@ -106,11 +107,11 @@ h2 {
   margin-top: 40px;
 }
 .btn:hover {
-  color: #d9f504;
+  color: #631199;
   transform: scale(2);
 }
-#playBtn:hover {
-  color: #631199;
+#listBtn:hover {
+  color: #d9f504;
 }
 .big {
   transform: scale(1.8);
@@ -129,7 +130,7 @@ h2 {
   background-color: #cececea6;
 }
 #progress {
-  background: #dbf227;
+  background: #631199;
   border-radius: 10px;
   height: 10px;
   position: absolute;
@@ -148,6 +149,24 @@ h2 {
 }
 .display-none {
   display: none;
+}
+footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: 12vh;
+}
+footer p {
+  letter-spacing: 0;
+  font-size: 10px;
+  color: #f0f0ed38;
+}
+footer a {
+  color: #d9f50441;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #d9f504;
 }
 @media (max-width: 1380px) {
   .container {

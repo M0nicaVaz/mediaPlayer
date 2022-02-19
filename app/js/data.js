@@ -15,6 +15,7 @@ let listBtn = document.querySelector('#listBtn'),
   nextSongDiv = document.querySelector('#nextSongDiv'),
   progress = document.querySelector('#progress'),
   progressBar = document.querySelector('#progressBar'),
+  darkMode = document.querySelector('#light-mode'),
   odd = 0,
   index = 0,
   startY = 0;
