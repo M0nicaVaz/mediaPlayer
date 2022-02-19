@@ -24,9 +24,9 @@ function showInfo() {
 function showNextSong() {
   if (playerContainer.classList.contains('big-player')) {
     if (index < 4) {
-      nextSongP.innerHTML = 'próxima música: ' + songList[index + 1].title;
+      nextSongP.innerHTML = 'a seguir: ' + songList[index + 1].title;
     } else {
-      nextSongP.innerHTML = 'próxima música: ' + songList[0].title;
+      nextSongP.innerHTML = 'a seguir: ' + songList[0].title;
     }
   }
 }
