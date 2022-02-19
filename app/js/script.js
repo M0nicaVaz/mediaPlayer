@@ -55,6 +55,7 @@ musicQueue.addEventListener('click', (e) => {
   let obj = songList.findIndex((obj) => obj.title === e.target.innerText);
   index = obj;
   song.src = songList[index].src;
+  playBtn.innerHTML = "<i class='material-icons pause'>pause_circle_filled</i>";
   changePlayer();
   song.play();
 });
@@ -103,8 +104,20 @@ prevBtn.addEventListener('click', () => {
   showNextSong();
 });
 
+song.addEventListener('timeupdate', (e) => {
+  let currentTime = e.target.currentTime;
+  let duration = e.target.duration;
+  let progressWidth = (currentTime / duration) * 100;
+  progress.style.width = `${progressWidth}%`;
+});
+
+progressBar.addEventListener('click', (e) => {
+  let val = progressBar.clientWidth;
+  let progressClicked = e.offsetX;
+  let songDuration = song.duration;
+  song.currentTime = (progressClicked / val) * songDuration;
+});
+
 nextBtn.addEventListener('click', nextSong);
 
 song.addEventListener('ended', nextSong);
-
-// progression bar

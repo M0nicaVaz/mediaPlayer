@@ -12,8 +12,10 @@ let musicQueue = document.querySelector('#music-list');
 let songInfo = document.querySelector('#info');
 let song = document.querySelector('#song');
 let nextSongP = document.querySelector('#nextSongI');
+let progress = document.querySelector('#progress');
+let progressBar = document.querySelector('#progressBar');
 let odd = 0;
-index = 0;
+let index = 0;
 
 const songList = [
   {
