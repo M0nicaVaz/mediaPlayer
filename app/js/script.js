@@ -87,14 +87,6 @@ stopBtn.addEventListener('click', () => {
     "<i id='play' class='material-icons pause'>play_circle</i>";
 });
 
-fowardBtn.addEventListener('click', () => {
-  song.currentTime += 10;
-});
-
-rewindBtn.addEventListener('click', () => {
-  song.currentTime -= 10;
-});
-
 prevBtn.addEventListener('click', () => {
   index--;
   song.src = songList[index].src;
@@ -109,6 +101,26 @@ song.addEventListener('timeupdate', (e) => {
   let duration = e.target.duration;
   let progressWidth = (currentTime / duration) * 100;
   progress.style.width = `${progressWidth}%`;
+
+  song.addEventListener('loadeddata', () => {
+    let durationP = document.querySelector('#duration');
+    let totalMin = Math.floor(song.duration / 60);
+    let totalSec = Math.floor(song.duration % 60);
+
+    if (totalSec < 10) {
+      totalSec = `0${totalSec}`;
+    }
+    durationP.innerText = `${totalMin}:${totalSec}`;
+  });
+
+  let currentTimeP = document.querySelector('#current');
+  let currentMin = Math.floor(song.currentTime / 60);
+  let currentSec = Math.floor(song.currentTime % 60);
+
+  if (currentSec < 10) {
+    currentSec = '0' + currentSec;
+  }
+  currentTimeP.innerText = `${currentMin}:${currentSec}`;
 });
 
 progressBar.addEventListener('click', (e) => {

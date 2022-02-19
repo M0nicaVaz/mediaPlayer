@@ -8,9 +8,6 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-variant: small-caps;
 }
-.fa-solid {
-  font-size: 20px;
-}
 .container {
   top: 10vh;
   margin: auto;
@@ -89,22 +86,23 @@ h2 {
   border: none;
   padding: 1px;
   transform: scale(1.4);
-  margin-left: 10px;
+  margin-left: 20px;
   cursor: pointer;
   color: #2b2a2a;
   background: none;
-  margin-top: 35px;
+  margin-top: 40px;
 }
 .btn:hover {
   color: #631199;
   transform: scale(2);
 }
 .big {
-  transform: scale(1.6);
+  transform: scale(1.8);
 }
 #info {
   margin-top: 5vh;
 }
+
 #progressBar {
   margin: auto;
   margin-top: 30px;
@@ -120,7 +118,18 @@ h2 {
   height: 10px;
   position: absolute;
 }
-
+#beginning {
+  position: relative;
+  float: left;
+  left: 10%;
+  margin-top: 2px;
+}
+#end {
+  position: relative;
+  float: right;
+  right: 10%;
+  margin-top: 2px;
+}
 .display-none {
   display: none;
 }
