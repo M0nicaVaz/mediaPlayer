@@ -24,9 +24,9 @@ function showInfo() {
 function showNextSong() {
   if (playerContainer.classList.contains('big-player')) {
     if (index < 4) {
-      nextSongP.innerHTML = 'a seguir: ' + songList[index + 1].title;
+      nextSongP.innerHTML = 'a seguir: ' + '<br>' + songList[index + 1].title;
     } else {
-      nextSongP.innerHTML = 'a seguir: ' + songList[0].title;
+      nextSongP.innerHTML = 'a seguir: ' + '<br>' + songList[0].title;
     }
   }
 }
@@ -64,6 +64,7 @@ listBtn.addEventListener('click', () => {
   let listBtn = document.querySelector('#listBtn');
   listContainer.classList.toggle('display-none');
   playerContainer.classList.toggle('big-player');
+
   odd++;
 
   if (odd % 2) {

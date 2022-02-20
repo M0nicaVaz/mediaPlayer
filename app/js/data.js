@@ -15,10 +15,8 @@ let listBtn = document.querySelector('#listBtn'),
   nextSongDiv = document.querySelector('#nextSongDiv'),
   progress = document.querySelector('#progress'),
   progressBar = document.querySelector('#progressBar'),
-  darkMode = document.querySelector('#light-mode'),
-  odd = 0,
-  index = 0,
-  startY = 0;
+  bigPlayer = document.querySelector('.big-player');
+(odd = 0), (index = 0), (startY = 0);
 
 const songList = [
   {

@@ -5,6 +5,7 @@
 }
 body {
   background: #2b2a2a;
+  height: max-content;
 
   font-family: 'Montserrat', sans-serif;
 }
@@ -67,6 +68,10 @@ li:hover {
   border-radius: 10px;
   float: right;
 }
+.big-player {
+  width: 95%;
+  margin-right: 30px;
+}
 p {
   margin-top: 20px;
   font-size: 12px;
@@ -75,10 +80,7 @@ p {
   font-weight: 400;
   letter-spacing: 3px;
 }
-.big-player {
-  width: 95%;
-  margin-right: 30px;
-}
+
 .audio-control {
   width: 90%;
   margin: auto;
@@ -119,7 +121,6 @@ h2 {
 #info {
   margin-top: 5vh;
 }
-
 #progressBar {
   margin: auto;
   margin-top: 20px;
@@ -168,7 +169,7 @@ footer a {
 footer a:hover {
   color: #d9f504;
 }
-@media (max-width: 1380px) {
+@media (max-width: 1024px) {
   .container {
     width: 90%;
   }
@@ -184,17 +185,109 @@ footer a:hover {
     margin-right: 10px;
   }
   .btn {
-    transform: scale(1.2);
-    margin-left: 0px;
+    transform: scale(1.5);
+    margin-left: 10px;
   }
   .big-player {
     width: 95%;
     text-align: center;
-    margin-left: 10px;
+    margin-left: 15px;
     left: 0;
   }
   img {
     width: 120px;
     height: 120px;
+  }
+}
+@media (max-width: 480px) {
+  /* body {
+    height: 100%;
+  } */
+  .container {
+    top: 1vh;
+    width: 90%;
+    text-align: center;
+    background-color: inherit;
+    margin-bottom: 25px;
+    padding-top: 15px;
+    min-height: fit-content;
+  }
+  .container h1 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+  .inside {
+    margin-top: 0vh;
+    top: 0;
+  }
+  .list-container {
+    width: 90%;
+    position: relative;
+    height: max-content;
+    margin-left: 20px;
+  }
+  li {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+  .player-container {
+    width: 95%;
+    position: relative;
+    float: none;
+    left: 0;
+    height: fit-content;
+    margin: auto;
+  }
+  .player-container h2 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .big-player {
+    top: 4vh;
+    width: 98%;
+    margin-left: 0;
+    position: absolute;
+    height: 90vh;
+    padding: 20px;
+  }
+  .audio-control {
+    padding-bottom: 50px;
+  }
+  .btn {
+    transform: scale(1.8);
+    margin-top: 60px;
+    margin-left: 10px;
+  }
+  #listBtn {
+    margin-left: 0px;
+  }
+  #albumPic {
+    height: 180px;
+    width: 180px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  #info {
+    font-size: 12px;
+  }
+  #nextSongI {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  footer {
+    position: relative;
+    height: 20px;
+    top: -10px;
+    margin-bottom: 10px;
+  }
+  footer p {
+    font-size: 8px;
+    margin-top: 30vh;
+  }
+}
+@media (max-width: 376px) {
+  footer p {
+    margin-top: 70vh;
   }
 }
