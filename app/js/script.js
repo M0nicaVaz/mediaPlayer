@@ -11,7 +11,7 @@ function nextSong() {
   }
   song.src = songList[index].src;
   song.play();
-  playBtn.innerHTML = "<i class='material-icons pause'>pause_circle_filled</i>";
+  playBtn.innerHTML = `<i class='material-icons pause'>pause_circle_filled</i>`;
   showInfo();
   showNextSong();
 }
@@ -24,16 +24,16 @@ function showInfo() {
 function showNextSong() {
   if (playerContainer.classList.contains('big-player')) {
     if (index < 4) {
-      nextSongP.innerHTML = 'a seguir: ' + '<br>' + songList[index + 1].title;
+      nextSongP.innerHTML = ` a seguir: <br> ${songList[index + 1].title}`;
     } else {
-      nextSongP.innerHTML = 'a seguir: ' + '<br>' + songList[0].title;
+      nextSongP.innerHTML = ` a seguir: <br> ${songList[0].title}`;
     }
   }
 }
 
 window.addEventListener('load', () => {
   for (let i = 0; i < songList.length; i++) {
-    musicQueue.innerHTML += '<li>' + songList[i].title + '</li>';
+    musicQueue.innerHTML += `<li> ${songList[i].title} </li>`;
   }
   changePlayer();
 });
@@ -42,12 +42,10 @@ playBtn.addEventListener('click', () => {
   albumPic.src = songList[index].album;
   if (song.paused) {
     song.play();
-    playBtn.innerHTML =
-      "<i class='material-icons pause'>pause_circle_filled</i>";
+    playBtn.innerHTML = `<i class='material-icons pause'>pause_circle_filled</i>`;
   } else {
     song.pause();
-    playBtn.innerHTML =
-      "<i id='play' class='material-icons pause'>play_circle</i>";
+    playBtn.innerHTML = `<i id='play' class='material-icons pause'>play_circle</i>`;
   }
 });
 
@@ -55,7 +53,7 @@ musicQueue.addEventListener('click', (e) => {
   let obj = songList.findIndex((obj) => obj.title === e.target.innerText);
   index = obj;
   song.src = songList[index].src;
-  playBtn.innerHTML = "<i class='material-icons pause'>pause_circle_filled</i>";
+  playBtn.innerHTML = `<i class='material-icons pause'>pause_circle_filled</i>`;
   changePlayer();
   song.play();
 });
@@ -69,13 +67,11 @@ listBtn.addEventListener('click', () => {
 
   if (odd % 2) {
     albumPic.style.transform = 'scale(1.1)';
-    listBtn.innerHTML =
-      ' <i id="listBtn" class="material-icons"> playlist_add</i>';
+    listBtn.innerHTML = `<i id="listBtn" class="material-icons"> playlist_add</i>`;
     nextSongP.style.opacity = '1';
     showNextSong();
   } else {
-    listBtn.innerHTML =
-      '<i id="listBtn" class="material-icons"> playlist_remove</i>';
+    listBtn.innerHTML = `<i id="listBtn" class="material-icons"> playlist_remove</i>`;
     albumPic.style.transform = 'scale(1)';
     nextSongP.style.opacity = '0';
   }
@@ -84,15 +80,14 @@ listBtn.addEventListener('click', () => {
 stopBtn.addEventListener('click', () => {
   song.pause();
   song.currentTime = 0;
-  playBtn.innerHTML =
-    "<i id='play' class='material-icons pause'>play_circle</i>";
+  playBtn.innerHTML = `<i id='play' class='material-icons pause'>play_circle</i>`;
 });
 
 prevBtn.addEventListener('click', () => {
   index--;
   song.src = songList[index].src;
   song.play();
-  playBtn.innerHTML = "<i class='material-icons pause'>pause_circle_filled</i>";
+  playBtn.innerHTML = `v<i class='material-icons pause'>pause_circle_filled</i>`;
   showInfo();
   showNextSong();
 });
@@ -119,7 +114,7 @@ song.addEventListener('timeupdate', (e) => {
   let currentSec = Math.floor(song.currentTime % 60);
 
   if (currentSec < 10) {
-    currentSec = '0' + currentSec;
+    currentSec = `0${currentSec}`;
   }
   currentTimeP.innerText = `${currentMin}:${currentSec}`;
 });
