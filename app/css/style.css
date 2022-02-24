@@ -152,10 +152,11 @@ h2 {
   display: none;
 }
 footer {
-  position: relative;
+  position: fixed;
+  left: 0;
+  bottom: 0;
   width: 100%;
   text-align: center;
-  margin-top: 12vh;
 }
 footer p {
   letter-spacing: 0;
@@ -198,11 +199,14 @@ footer a:hover {
     width: 120px;
     height: 120px;
   }
+  footer {
+    position: fixed;
+    min-width: 100%;
+    text-align: center;
+    clear: both;
+  }
 }
 @media (max-width: 480px) {
-  /* body {
-    height: 100%;
-  } */
   .container {
     top: 1vh;
     width: 90%;
@@ -277,13 +281,14 @@ footer a:hover {
   }
   footer {
     position: relative;
-    height: 20px;
-    top: -10px;
-    margin-bottom: 10px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
   }
   footer p {
     font-size: 8px;
-    margin-top: 30vh;
+    margin-top: 20vh;
   }
 }
 @media (max-width: 376px) {

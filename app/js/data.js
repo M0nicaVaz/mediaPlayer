@@ -15,7 +15,9 @@ let listBtn = document.querySelector('#listBtn'),
   nextSongDiv = document.querySelector('#nextSongDiv'),
   progress = document.querySelector('#progress'),
   progressBar = document.querySelector('#progressBar'),
-  bigPlayer = document.querySelector('.big-player');
+  bigPlayer = document.querySelector('.big-player'),
+  durationP = document.querySelector('#duration'),
+  currentTimeP = document.querySelector('#current');
 (odd = 0), (index = 0);
 
 const songList = [
