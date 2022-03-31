@@ -24,18 +24,18 @@
   </head>
 
   <body>
-    <div class="container">
+    <div id="mainContainer" class="container">
       <div class="inside player-container">
-        <p id="nextSongI"></p>
+        <p class="player-next-song" id="nextSongI"></p>
 
-        <img id="albumPic" src="" />
-        <h2 id="info"></h2>
+        <img class="player-img" id="albumPic" src="" />
+        <h2 class="player-title" id="info"></h2>
 
-        <div id="progressBar">
-          <div id="progress"></div>
+        <div class="player-progress-container" id="progressBar">
+          <div class="player-progress-bar" id="progress"></div>
         </div>
-        <p id="current" class="timing"></p>
-        <p id="duration" class="timing"></p>
+        <p class="player-song-timer init" id="current">0:00</p>
+        <p class="player-song-timer end" id="duration"></p>
 
         <div class="audio-control">
           <audio id="song">
@@ -61,17 +61,17 @@
       </div>
 
       <div class="inside list-container">
-        <h1>PLAYLIST</h1>
+        <h1 class="list-title">PLAYLIST</h1>
 
-        <ul id="music-list"></ul>
+        <ul class="playlist-list" id="music-list"></ul>
       </div>
     </div>
 
-    <footer>
-      <p>
+    <footer class="page-footer">
+      <p class="page-footer-disclaimer">
         Note from
-        <a href="http://github.com/M0nicaVaz">dev</a>: this page was created for
-        studying purposes only. <br />
+        <a href="http://github.com/M0nicaVaz" class="page-footer-link">dev</a>:
+        this page was created for studying purposes only. <br />
         I do not own any of these songs. Please do not share.
       </p>
     </footer>

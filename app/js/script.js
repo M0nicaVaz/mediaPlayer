@@ -33,7 +33,7 @@ function showNextSong() {
 
 window.addEventListener('load', () => {
   for (let i = 0; i < songList.length; i++) {
-    musicQueue.innerHTML += `<li> ${songList[i].title} </li>`;
+    musicQueue.innerHTML += `<li class="playlist-list-item"> ${songList[i].title} </li>`;
   }
   changePlayer();
 });
@@ -60,6 +60,9 @@ musicQueue.addEventListener('click', (e) => {
 
 listBtn.addEventListener('click', () => {
   let listBtn = document.querySelector('#listBtn');
+  let container = document.querySelector('#mainContainer');
+
+  container.classList.toggle('opened-container');
   listContainer.classList.toggle('display-none');
   playerContainer.classList.toggle('big-player');
 
@@ -98,17 +101,6 @@ song.addEventListener('timeupdate', (e) => {
   let progressWidth = (currentTime / duration) * 100;
   progress.style.width = `${progressWidth}%`;
 
-  song.addEventListener('loadeddata', () => {
-    let durationP = document.querySelector('#duration');
-    let totalMin = Math.floor(song.duration / 60);
-    let totalSec = Math.floor(song.duration % 60);
-
-    if (totalSec < 10) {
-      totalSec = `0${totalSec}`;
-    }
-    durationP.innerText = `${totalMin}:${totalSec}`;
-  });
-
   let currentTimeP = document.querySelector('#current');
   let currentMin = Math.floor(song.currentTime / 60);
   let currentSec = Math.floor(song.currentTime % 60);
@@ -117,6 +109,16 @@ song.addEventListener('timeupdate', (e) => {
     currentSec = `0${currentSec}`;
   }
   currentTimeP.innerText = `${currentMin}:${currentSec}`;
+});
+song.addEventListener('loadeddata', () => {
+  let durationP = document.querySelector('#duration');
+  let totalMin = Math.floor(song.duration / 60);
+  let totalSec = Math.floor(song.duration % 60);
+
+  if (totalSec < 10) {
+    totalSec = `0${totalSec}`;
+  }
+  durationP.innerText = `${totalMin}:${totalSec}`;
 });
 
 progressBar.addEventListener('click', (e) => {
