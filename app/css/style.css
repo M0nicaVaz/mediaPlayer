@@ -213,7 +213,7 @@ body {
   .btn:hover {
     transform: scale(2.3);
   }
-  .playlist-list-items {
+  .playlist-list-item {
     width: 100%;
   }
 }
@@ -234,7 +234,7 @@ body {
       ' . ';
   }
   .player-container {
-    width: 95%;
+    width: 22rem;
   }
   .player-title {
     font-size: 0.85rem;
@@ -243,7 +243,7 @@ body {
     padding: 0 2rem;
     grid-template-areas: '  player  ';
   }
-  .playlist-list-items {
+  .playlist-list-item {
     font-size: 1rem;
   }
   .btn {
