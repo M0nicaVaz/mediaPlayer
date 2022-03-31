@@ -87,8 +87,13 @@ stopBtn.addEventListener('click', () => {
 });
 
 prevBtn.addEventListener('click', () => {
+  if (index == 0) {
+    index = songList.length - 1;
+  }
+
   index--;
   song.src = songList[index].src;
+
   song.play();
   playBtn.innerHTML = `<i class='material-icons pause'>pause_circle_filled</i>`;
   showInfo();
