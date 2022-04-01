@@ -55,6 +55,7 @@ body {
   width: 100%;
   padding: 2rem;
 }
+
 .playlist-list-item {
   font-variant: small-caps;
   margin: auto;
@@ -79,10 +80,6 @@ body {
   background: var(--white-clr);
   border-radius: 10px;
   width: 28rem;
-  grid-area: player;
-}
-.big-player {
-  width: 100%;
   grid-area: player;
 }
 .player-next-song {
@@ -182,6 +179,15 @@ body {
   padding: 0 2rem;
   grid-template-areas: '  player  ';
 }
+.grow {
+  animation: grow ease-in 250ms forwards;
+}
+@keyframes grow {
+  to {
+    width: 95%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   body {
     grid-template-areas:
@@ -214,7 +220,7 @@ body {
     transform: scale(2.3);
   }
   .playlist-list-item {
-    width: 100%;
+    width: 90%;
   }
 }
 @media screen and (max-width: 780px) {

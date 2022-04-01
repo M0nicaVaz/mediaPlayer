@@ -64,7 +64,7 @@ listBtn.addEventListener('click', () => {
 
   container.classList.toggle('opened-container');
   listContainer.classList.toggle('display-none');
-  playerContainer.classList.toggle('big-player');
+  playerContainer.classList.toggle('grow');
 
   odd++;
 
