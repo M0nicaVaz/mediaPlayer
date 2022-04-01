@@ -22,7 +22,7 @@ function showInfo() {
 }
 
 function showNextSong() {
-  if (playerContainer.classList.contains('big-player')) {
+  if (playerContainer.classList.contains('grow')) {
     if (index < 4) {
       nextSongP.innerHTML = ` a seguir: <br> ${songList[index + 1].title}`;
     } else {

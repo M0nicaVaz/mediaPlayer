@@ -182,6 +182,7 @@ body {
 .grow {
   animation: grow ease-in 250ms forwards;
 }
+
 @keyframes grow {
   to {
     width: 95%;
@@ -196,14 +197,14 @@ body {
       ' footer ';
   }
   .container {
-    width: 85%;
+    width: 90%;
     grid-template-areas:
       '   player   '
       '  list  '
       ' . ';
   }
   .player-container {
-    width: 100%;
+    width: 80%;
     padding: 0 2rem 8rem;
     background: var(--white-clr);
     border-radius: 10px;
@@ -240,7 +241,7 @@ body {
       ' . ';
   }
   .player-container {
-    width: 22rem;
+    width: 80%;
   }
   .player-title {
     font-size: 0.85rem;
