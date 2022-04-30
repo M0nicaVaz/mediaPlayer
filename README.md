@@ -4,7 +4,7 @@
 
 Um player de músicas!
 <br><br>
-<a href = "https://psiindica.netlify.app/"> Veja em funcionamento. </a>
+<a href = "https://m0nicavaz.github.io/mediaPlayer/"> Veja em funcionamento. </a>
 
 ## Preview
 
