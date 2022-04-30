@@ -8,7 +8,7 @@ Um player de músicas!
 
 ## Preview
 
-<img src="https://github.com/M0nicaVaz/mediaPlayer/blob/master/assets/images/github/preview.gif?raw=true" width="680px" >
+<img src="https://github.com/M0nicaVaz/mediaPlayer/blob/master/assets/images/preview.gif?raw=true" width="680px" >
 
 ### Desafios
 
