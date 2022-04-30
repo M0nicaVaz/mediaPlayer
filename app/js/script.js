@@ -23,7 +23,7 @@ function showInfo() {
 
 function showNextSong() {
   if (playerContainer.classList.contains('grow')) {
-    if (index < 4) {
+    if (index < songList.length) {
       nextSongP.innerHTML = ` a seguir: <br> ${songList[index + 1].title}`;
     } else {
       nextSongP.innerHTML = ` a seguir: <br> ${songList[0].title}`;
@@ -31,7 +31,7 @@ function showNextSong() {
   }
 }
 
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   for (let i = 0; i < songList.length; i++) {
     musicQueue.innerHTML += `<li class="playlist-list-item"> ${songList[i].title} </li>`;
   }
